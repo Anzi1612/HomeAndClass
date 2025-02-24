@@ -8,7 +8,7 @@ public class MyCharacterController : MonoBehaviour
     public Animator controller;
 
     public float runningSpeed;
-   
+
 
     void Update()
     {
@@ -24,6 +24,7 @@ public class MyCharacterController : MonoBehaviour
 
         PlayerMovement();
         PlayerRotation();
+        playerPunch();
     }
 
     void PlayerMovement()
@@ -38,5 +39,14 @@ public class MyCharacterController : MonoBehaviour
     void PlayerRotation()
     {
         transform.Rotate(0, Input.GetAxis("Horizontal") * 200 * Time.deltaTime, 0);
+    }
+
+    void playerPunch()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            controller.SetBool("Punch", true);
+
+        }
     }
 }
