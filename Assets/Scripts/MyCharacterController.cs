@@ -24,7 +24,7 @@ public class MyCharacterController : MonoBehaviour
 
         PlayerMovement();
         PlayerRotation();
-        playerPunch();
+        playerPunch();  
     }
 
     void PlayerMovement()
@@ -50,3 +50,4 @@ public class MyCharacterController : MonoBehaviour
         }
     }
 }
+`
